@@ -25,6 +25,11 @@ public class SamplesNavigationHandler : MonoBehaviour
         SamplesMainMenu.LoadScene(SamplesMainMenu.LoadingScene);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void LoadMenuScene()
     {
         // called by "Vuforia Samples" button in AR scene UI menu
