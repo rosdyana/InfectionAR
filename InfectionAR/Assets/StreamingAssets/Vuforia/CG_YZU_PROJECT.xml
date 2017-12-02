@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="100NTD_people" size="1.000000 0.477401" />
+    <ImageTarget name="100NTD_building" size="1.000000 0.477401" />
+    <ImageTarget name="yzu_logo" size="177.000000 169.345947" />
+  </Tracking>
+</QCARConfig>

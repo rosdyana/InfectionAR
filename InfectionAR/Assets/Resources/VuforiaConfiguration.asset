@@ -44,10 +44,12 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - CG_YZU_PROJECT
     - VuforiaMars_Images
     - VuforiaMars_Object_OT
     - VuforiaMars_VuMark
     dataSetsToActivate:
+    - CG_YZU_PROJECT
     - VuforiaMars_Images
     - VuforiaMars_Object_OT
     - VuforiaMars_VuMark
