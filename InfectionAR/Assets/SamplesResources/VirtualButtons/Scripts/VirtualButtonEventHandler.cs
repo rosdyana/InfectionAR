@@ -18,7 +18,8 @@ public class VirtualButtonEventHandler : MonoBehaviour,
     #region PUBLIC_MEMBERS
     public Material m_VirtualButtonMaterial;
     public Material m_VirtualButtonMaterialPressed;
-    public int scene_idx;
+    public int gameplay1_idx;
+    public int gameplay2_idx;
     #endregion // PUBLIC_MEMBERS
 
     #region PRIVATE_MEMBERS
@@ -66,9 +67,13 @@ public class VirtualButtonEventHandler : MonoBehaviour,
 
         switch (vb.VirtualButtonName)
         {
-            case "newgame":
+            case "gameplay1":
                 // Load new scene
-                SceneManager.LoadScene(scene_idx);                
+                SceneManager.LoadScene(gameplay1_idx);                
+                break;
+            case "gameplay2":
+                // Load new scene
+                SceneManager.LoadScene(gameplay2_idx);
                 break;
 
             case "exitgame":
