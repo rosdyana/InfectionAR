@@ -9,19 +9,24 @@ public class EnemyHandler : MonoBehaviour
 
     private Transform goal;
     private NavMeshAgent agent;
-    public float speed;
+    [SerializeField]
+    private float speed;
     public DefaultTrackableEventHandler trackingHandler;
+    [SerializeField]
     public String anim_walk;
+    [SerializeField]
     public String anim_death;
+    [SerializeField]
+    private String goal_name;
 
 
     void Update()
     {
         if (trackingHandler.isTracked)
         {
-            Debug.Log("start walking");
+            //Debug.Log("start walking");
             //create references
-            goal = GameObject.FindGameObjectWithTag("coin").transform;
+            goal = GameObject.FindGameObjectWithTag(goal_name).transform;
             transform.position = Vector3.MoveTowards(transform.position, goal.position, speed*Time.deltaTime);
             //Debug.Log(goal);
             //agent = GetComponent<NavMeshAgent>();
@@ -29,7 +34,7 @@ public class EnemyHandler : MonoBehaviour
             //agent.SetDestination(goal.position);
             //start the walking animation
             //GetComponent<Animation>().Play("Zombie_Walk_01");
-            GetComponent<Animation>().Play(anim_walk);
+            PlayAnimation(anim_walk);
             //trackingHandler.isTracked = false;
         }
     }
@@ -46,8 +51,18 @@ public class EnemyHandler : MonoBehaviour
         if (col.gameObject.tag == "bullet")
         {
             Debug.Log("Enemy Destroyed");
-            GetComponent<Animation>().Play(anim_death);
+            PlayAnimation(anim_death);
             Destroy(gameObject, 2);
         }
+    }
+
+    public void PlayAnimation(String anim_name)
+    {
+        GetComponent<Animation>().Play(anim_name);
+    }
+
+    public void StopAnimation(String anim_name)
+    {
+        GetComponent<Animation>().Stop(anim_name);
     }
 }

@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33470916672285196}
   - component: {fileID: 135269318426922872}
   - component: {fileID: 23467559605963136}
-  - component: {fileID: 54640674487827912}
   - component: {fileID: 82125152670112194}
+  - component: {fileID: 54526049488724328}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1634144301621592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 329.2, y: 148.1, z: 0}
-  m_LocalScale: {x: 0.10249998, y: 0.085624896, z: 0.1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,17 +85,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634144301621592}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54640674487827912
+--- !u!54 &54526049488724328
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634144301621592}
   serializedVersion: 2
-  m_Mass: 0.2
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

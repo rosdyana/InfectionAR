@@ -8,6 +8,7 @@ TagManager:
   - player
   - zombie
   - bullet
+  - girl
   layers:
   - Default
   - TransparentFX
