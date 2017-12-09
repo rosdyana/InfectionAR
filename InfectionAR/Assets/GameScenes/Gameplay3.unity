@@ -828,6 +828,7 @@ MonoBehaviour:
   anime_idle: Idle_Trump
   goal_name: coin
   deathSoundFx: {fileID: 228367502}
+  pnlGameOver: {fileID: 770734908}
 --- !u!1 &202668429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,6 +5001,7 @@ MonoBehaviour:
   anime_idle: Idle_Trump
   goal_name: coin
   deathSoundFx: {fileID: 228367502}
+  pnlGameOver: {fileID: 770734908}
 --- !u!21 &1464429787
 Material:
   serializedVersion: 6
@@ -5370,6 +5372,7 @@ MonoBehaviour:
   anime_idle: Idle_Trump
   goal_name: coin
   deathSoundFx: {fileID: 228367502}
+  pnlGameOver: {fileID: 770734908}
 --- !u!1 &1556833051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,6 +6486,7 @@ MonoBehaviour:
   anime_idle: Idle_Trump
   goal_name: coin
   deathSoundFx: {fileID: 228367502}
+  pnlGameOver: {fileID: 770734908}
 --- !u!1 &1913115078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6575,6 +6579,7 @@ MonoBehaviour:
   anime_idle: Idle_Trump
   goal_name: coin
   deathSoundFx: {fileID: 228367502}
+  pnlGameOver: {fileID: 770734908}
 --- !u!136 &1913833351
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6766,6 +6771,7 @@ MonoBehaviour:
   anime_idle: Idle_Trump
   goal_name: coin
   deathSoundFx: {fileID: 228367502}
+  pnlGameOver: {fileID: 770734908}
 --- !u!1 &1959242538
 GameObject:
   m_ObjectHideFlags: 0

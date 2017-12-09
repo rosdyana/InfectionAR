@@ -526,6 +526,7 @@ MonoBehaviour:
   anime_idle: zombie_attack
   goal_name: coin
   deathSoundFx: {fileID: 1398984301}
+  pnlGameOver: {fileID: 1675262029}
 --- !u!1 &139061197
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +649,7 @@ MonoBehaviour:
   anime_idle: zombie_attack
   goal_name: coin
   deathSoundFx: {fileID: 1398984301}
+  pnlGameOver: {fileID: 1675262029}
 --- !u!1 &171053652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,6 +2049,7 @@ MonoBehaviour:
   anime_idle: zombie_attack
   goal_name: coin
   deathSoundFx: {fileID: 1398984301}
+  pnlGameOver: {fileID: 1675262029}
 --- !u!1 &598411228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2205,7 @@ MonoBehaviour:
   anime_idle: zombie_attack
   goal_name: coin
   deathSoundFx: {fileID: 1398984301}
+  pnlGameOver: {fileID: 1675262029}
 --- !u!1 &718283317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,7 +4304,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -6134,6 +6138,7 @@ MonoBehaviour:
   anime_idle: zombie_attack
   goal_name: coin
   deathSoundFx: {fileID: 1398984301}
+  pnlGameOver: {fileID: 1675262029}
 --- !u!1 &1841047960
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,6 +7082,7 @@ MonoBehaviour:
   anime_idle: zombie_attack
   goal_name: coin
   deathSoundFx: {fileID: 1398984301}
+  pnlGameOver: {fileID: 1675262029}
 --- !u!1 &2056791024
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,8 @@ public class EnemyHandlerGP2 : MonoBehaviour {
     private String goal_name;
     [SerializeField]
     private AudioSource deathSoundFx;
-
+    [SerializeField]
+    private GameObject pnlGameOver;
     private bool targetAchieved = false;
 
     //public PlayerShoot ps;
@@ -66,7 +67,13 @@ public class EnemyHandlerGP2 : MonoBehaviour {
             Destroy(col.gameObject);
             trackingHandler.isTracked = false;
             targetAchieved = true;
+            GameOver(pnlGameOver);
         }
+    }
+
+    void GameOver(GameObject panel)
+    {
+        panel.SetActive(true);
     }
 
     public void PlayAnimation(String anim_name)

@@ -93,8 +93,8 @@ public class PlayerController : MonoBehaviour {
         GameObject bullet = Instantiate(Resources.Load("m_bullet", typeof(GameObject))) as GameObject;
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         bullet.transform.rotation = playerTransf.rotation;
-        bullet.transform.position = new Vector3(playerTransf.position.x, 0.21f, playerTransf.position.z);
-        //Debug.Log("X : " + playerTransf.position.x + " Y : " + playerTransf.position.y + " Z : " + playerTransf.position.z);
+        bullet.transform.position = playerTransf.position;
+        Debug.Log("X : " + playerTransf.position.x + " Y : " + playerTransf.position.y + " Z : " + playerTransf.position.z);
         rb.AddForce(playerTransf.forward * power_bullet);
         shootFx.Play();
         Destroy(bullet, 3);
