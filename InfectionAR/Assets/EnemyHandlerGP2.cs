@@ -1,12 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
-using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AI;
-using Vuforia;
 
-public class EnemyHandler : MonoBehaviour
-{
-
+public class EnemyHandlerGP2 : MonoBehaviour {
     private Transform goal;
     private NavMeshAgent agent;
     [SerializeField]
@@ -17,17 +15,21 @@ public class EnemyHandler : MonoBehaviour
     [SerializeField]
     public String anim_death;
     [SerializeField]
+    public String anime_idle;
+    [SerializeField]
     private String goal_name;
+    [SerializeField]
+    private AudioSource deathSoundFx;
 
-    private bool isOwned = false;
+    private bool targetAchieved = false;
+
     //public PlayerShoot ps;
 
     void Update()
     {
         if (trackingHandler.isTracked)
         {
-            //if (ps.targetAchieved)
-            if(!isOwned)
+            if (!targetAchieved)
             {
                 //Debug.Log("start walking");
                 //create references
@@ -37,33 +39,33 @@ public class EnemyHandler : MonoBehaviour
                 //GetComponent<Animation>().Play("Zombie_Walk_01");
                 PlayAnimation(anim_walk);
                 //trackingHandler.isTracked = false;
-                //ps.targetAchieved = false;
+                targetAchieved = false;
+            }
+            else
+            {
+                PlayAnimation(anime_idle);
             }
 
         }
     }
-        
+
 
     void OnCollisionEnter(Collision col)
     {
         Debug.Log(col.gameObject.name);
-        if (col.gameObject.tag == "coin")
-        {
-            Debug.Log("Coin Destroyed");
-            Destroy(col.gameObject);
-            trackingHandler.isTracked = false;
-        }
         if (col.gameObject.tag == "bullet")
         {
+            deathSoundFx.Play();
             Debug.Log("Enemy Destroyed");
             PlayAnimation(anim_death);
             Destroy(gameObject, 2);
         }
         if (col.gameObject.tag == goal_name)
         {
-            Debug.Log("goal owned by enemy");
+            Debug.Log("Goal Destroyed");
             Destroy(col.gameObject);
-            isOwned = true;
+            trackingHandler.isTracked = false;
+            targetAchieved = true;
         }
     }
 

@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ObjectHitMainMenu : MonoBehaviour {
-
+    public int gp1;
+    public int gp2;
 	// Use this for initialization
 	void Start () {
 		
@@ -23,11 +24,11 @@ public class ObjectHitMainMenu : MonoBehaviour {
 
             if (hit.collider.gameObject.name == "Zombie_01")
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(gp1);
             }
             if (hit.collider.gameObject.name == "Donald_Trump")
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(gp2);
             }
         }
     }

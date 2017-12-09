@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/GameScenes/MainMenu.unity
     guid: 848519b3b576c7242abdce279b301198
   - enabled: 1
-    path: Assets/GameScenes/Gameplay.unity
+    path: Assets/GameScenes/preloadGP1.unity
+    guid: 593f44f2ad8b67749b00a6bd10ca7d9b
+  - enabled: 1
+    path: Assets/GameScenes/Gameplay1.unity
     guid: 27124fabfcb390b4c9169ebeb7ce6f81
+  - enabled: 1
+    path: Assets/GameScenes/preloadGP2.unity
+    guid: 86d439a4bc77124448f0fd13c331ad37
   - enabled: 1
     path: Assets/GameScenes/Gameplay2.unity
     guid: 8e9cebcbd06cc6e44bf5c27fba7be026
+  - enabled: 1
+    path: Assets/GameScenes/PreloadGP3.unity
+    guid: 051c0936e1d79654199fb05065e906d5
+  - enabled: 1
+    path: Assets/GameScenes/Gameplay3.unity
+    guid: abca16c7c26db9b41ac01832ab572046

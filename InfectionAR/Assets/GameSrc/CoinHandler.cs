@@ -5,8 +5,11 @@ using UnityEngine;
 public class CoinHandler : MonoBehaviour {
     [SerializeField]
     private float degrees;
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private GameObject pnlGameOver;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,5 +19,19 @@ public class CoinHandler : MonoBehaviour {
 
         //transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime);
         transform.Rotate(degrees, 0, 0, Space.World);
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "zombie")
+        {
+            Debug.Log("Game Over");
+            GameOver(pnlGameOver);
+        }
+    }
+
+    void GameOver(GameObject panel)
+    {
+        panel.SetActive(true);
     }
 }

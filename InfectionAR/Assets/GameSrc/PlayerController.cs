@@ -15,16 +15,31 @@ public class PlayerController : MonoBehaviour {
     private int power_bullet;
     [SerializeField]
     private AudioSource shootFx;
+    [SerializeField]
+    private GameObject pnlPrize;
+    [SerializeField]
+    private GameObject pnlIntro;
+    private int countZombie = 0;
+    private bool isWin = true;
+    [SerializeField]
+    private AudioSource deathSoundFx;
 
-    // Use this for initialization
+
     void Start () {
         fireButton.onClick.AddListener(OnButtonDown);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animation>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        StartCoroutine(showPanelWithTime(4, pnlIntro));
+    }
+
+    IEnumerator showPanelWithTime(int seconds, GameObject obj)
+    {
+        yield return new WaitForSeconds(seconds);
+        obj.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         float x = CrossPlatformInputManager.GetAxis("Horizontal");
         float y = CrossPlatformInputManager.GetAxis("Vertical");
@@ -50,10 +65,30 @@ public class PlayerController : MonoBehaviour {
             anim.Play("infantry_combat_idle");
         }
 
+        countZombie = GameObject.FindGameObjectsWithTag("zombie").Length;
+        if (countZombie == 0 && isWin)
+        {
+            showPanel(pnlPrize);
+            isWin = false;
+        }
+        //Debug.Log("count zombie : " + countZombie);
+
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log(col.gameObject.name);
+        if (col.gameObject.tag == "zombie")
+        {
+            Debug.Log("Enemy Destroyed");
+            Destroy(col.gameObject,0.3f);
+            deathSoundFx.Play();
+        }
     }
 
     void OnButtonDown()
     {
+        anim.Play("infantry_combat_shoot");
         Transform playerTransf = GameObject.FindGameObjectWithTag("player").transform;
         GameObject bullet = Instantiate(Resources.Load("m_bullet", typeof(GameObject))) as GameObject;
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
@@ -63,6 +98,11 @@ public class PlayerController : MonoBehaviour {
         shootFx.Play();
         Destroy(bullet, 3);
         Debug.Log("WE shoot ");
+    }
+
+    void showPanel(GameObject panel)
+    {
+        panel.SetActive(true);
     }
 
 }

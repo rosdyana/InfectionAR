@@ -74,7 +74,7 @@ MonoBehaviour:
     modelTransformEnabled: 0
     modelTransform: {x: 0, y: 0.1, z: -0.1}
   webcam:
-    deviceNameSetInEditor: Logitech Camera
+    deviceNameSetInEditor: Logitech HD Webcam C525
     flipHorizontally: 0
     turnOffWebCam: 0
     renderTextureLayer: 30
