@@ -15,4 +15,5 @@ a shooting game using Vuforia and Unity for Interactive Video Game Development c
 * Zombie in menu 3d model - https://www.assetstore.unity3d.com/en/#!/content/101964
 * Golden coin 3d model - https://www.assetstore.unity3d.com/en/#!/content/14162
 * 100 NTD - scanned by myself for game purpose only.
+* 2D gun - screenshoot from C.O.D : MW3 ( I bought this game in steamstore )
 * DPAD - Unity Standard Assets
