@@ -14,6 +14,7 @@ a shooting game using Vuforia and Unity for Interactive Video Game Development c
 
 ## Authors
 * **Rosdyana Kusuma**
+
 See also the list of [contributors](https://github.com/rosdyana/InfectionAR/contributors) who participated in this project.
 
 ## License
